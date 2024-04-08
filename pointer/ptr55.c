@@ -6,8 +6,8 @@
  int main(void)
  {
  int a, choice;
- int(*fptr[2])(int, int) = { add, subtract };
-
+ int(*fptr[2])(int, int)= { add, subtract };
+ 
  printf("Enter your choice:\n");
  printf("\t0:\taddition (10 + 2)\n\t1:\tsubtraction (10 - 2)\n");
  scanf("%d%*c", &choice);
