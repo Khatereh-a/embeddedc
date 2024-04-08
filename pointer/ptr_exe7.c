@@ -58,20 +58,22 @@
   		for(int i=0;i<(size-1);i++)
 		  {
 		    if(*(str+i)> *(str+i+1))  *(temp+i+2) = *(str+i);
-			else *(temp+i+2) = *(str+i+1);	
-			
-			printf("%c\n", *check);
-			if(*check < *min)
-	   	    { 
-		  	 *min = *check;		  	 			   		
-		    }
-			
-			if(*check > *max)
-	   	    { 
-	   	     *max = *check;	   	 	
-		    }
-			
-			check++;  
-			   
-		  }		  					
+			else *(temp+i+2) = *(str+i+1);										   
+		  }
+		  
+	    for(int i=0;i<size;i++)
+		  {	
+			   printf("%c\n", *check);
+				if(*check < *min)
+		   	    { 
+			  	 *min = *check;		  	 			   		
+			    }
+				
+				if(*check > *max)
+		   	    { 
+		   	     *max = *check;	   	 	
+			    }
+				
+				check++; 
+		   }
   }
