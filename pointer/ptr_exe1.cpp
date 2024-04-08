@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 void ReadValues(float *,float *,float *);
 int main(void){
