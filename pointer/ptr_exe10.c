@@ -7,8 +7,7 @@ float add(int, int);
 float subtract(int, int);
 float multiply(int, int);
 float division(int, int); 
-
-float Choose( int, int, int);
+void Choose(int*);
 
 int main(void)
  {
@@ -21,14 +20,12 @@ int main(void)
     Read(&num1,&num2);
     while(1)
     {
-	
-	    printf("Choose an operand:\n");
-	    printf("\t0:\taddition\n\t1:\tsubtraction\n\t2:\tmultiplication\n\t3:\tdivision\n");
-	    scanf("%d%*c", &choice);
+	    Choose(&choice);
+	    printf("%d\n\n", choice); 
+		
 	    if((choice>=0) & (choice<4)) 
-		{ 		
-		result=(*fptr[choice])( num1, num2); 
-		//result= Choose(num1, num2, fptr[choice]);
+		{ 
+		result =(*fptr[choice])( num1, num2); 	     		
 		printf("The result of this operation is: %f\n\n", result); 
 		break;}
     }
@@ -40,9 +37,12 @@ void Read(int *a,int *b)
     scanf("%d %d%*c", a, b); 
 }
 
-float Choose(int a, int b,float(*fptr[ch])(int int))
+void Choose(int * ch)
  {
- return (*fptr[ch])(a,b);
+ 	
+ 	printf("Choose an operand:\n");
+    printf("\t0:\taddition\n\t1:\tsubtraction\n\t2:\tmultiplication\n\t3:\tdivision\n");
+	scanf("%d%*c", ch);	
  }
 
 
