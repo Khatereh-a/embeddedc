@@ -21,7 +21,7 @@ int main(void)
     while(1)
     {
 	    Choose(&choice);
-	    printf("%d\n\n", choice); 
+	    //printf("%d\n\n", choice); 
 		
 	    if((choice>=0) & (choice<4)) 
 		{ 
