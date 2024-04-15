@@ -11,9 +11,11 @@ int main(void){
 	//fptr = add; //memory address of function
 	double a = 4;
 	double b = 6;
-	//double result = fptr(a,b);
-	double result = (*fptr)(a,b); //dereferencing
+	
+	//double result = fptr(a,b);	
 	//printf("result = %f",(*fptr)(4,6));
+	
+    double result = (*fptr)(a,b); //dereferencing
 	printf("result = %f",result);
 }
 

@@ -1,7 +1,6 @@
 #include "stdio.h" //printf
 
 //Youtube - Portfolio Courses - c programming tutorial 
-//function pointers as an function argument
 //returns* a pointer to a function 
 
 int add(int x, int y);
@@ -13,13 +12,12 @@ int (*select_operation())(int, int);
 
 int main(void){
 	
-	//int (*fptr[])(int,int) = {add,subtract,multiply,divide}; 
+
 	int (*fptr)(int,int) = select_operation();
 	//int (*fptr)() = select_operation();
 	int a =4;
 	int b=6;
 
-	//int result = (*fptr[0])(a,b); 
     int result = fptr(a,b);
 	printf("result = %d",result);
     //printf("result: %d\n", (*fptr)(4,6));

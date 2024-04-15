@@ -20,10 +20,18 @@ int main(void) //calling environment
   array_add_ptr(myarray); //the array "decays to a pointer , array name without an index , memory address
   // array_add(myarray); //myarray : the memory address of the array
   
-  printf("myarray[0]: %d\n", myarray[0]);
-
-  printf("myarray: %p\n", myarray);
- 	
+  
+  printf("myarray[0]: %d\n\n", myarray[0]); //value
+  
+  //point to first element of array 
+  printf("  &myarray[0]: %p\n", &myarray[0]);
+  printf("&myarray[0]+1: %p\n\n", &myarray[0]+1);
+  printf("  myarray: %p\n", myarray); 
+  printf("myarray+1: %p\n\n", myarray+1);  
+  
+  // point to entire array 
+  printf("  &myarray: %p\n", &myarray);
+  printf("&myarray+1: %p\n", &myarray+1);	
  	return 0 ;
  }
  //  The 'a' variable in main has no relationship to x, it remains unchanged.
@@ -36,7 +44,7 @@ void add(int x)
 void array_add(int array[])
 {
 
-  printf("array: %p\n", array);
+  //printf("array: %p\n", array);
 
   array[0] = array[0] + 1;
 }
@@ -44,6 +52,6 @@ void array_add(int array[])
 // This function is equivalent to the above! 
 void array_add_ptr(int *array)
 {
-  printf("array: %p\n", array);
+  //printf("array: %p\n", array);
   array[0] = array[0] + 1;
 } 	
